@@ -1,0 +1,26 @@
+{
+    "master_ip": "192.168.1.100",
+    "nodes": [
+        "192.168.1.100",
+        "192.168.1.101",
+        "192.168.1.102"
+    ],
+    "model_name": "deepseekr1",
+    "model_path": "/model/deepseekr1_w8a8",
+    "world_size": 32,
+    "docker": {
+        "image": "mindie image id",
+        "volumes": {
+            "/data/model/deepseekr1_w8a8": "/model/deepseekr1_w8a8"
+        },
+        "network": "host",
+        "privileged": true
+    },
+    "ssh": {
+        "username": "your_username",
+        "use_key": true,
+        "key_path": "~/.ssh/id_rsa",
+        "password": null,
+        "port": 22
+    }
+} 
